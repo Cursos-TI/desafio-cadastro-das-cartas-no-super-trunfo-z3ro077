@@ -7,7 +7,7 @@
 //Teste larissa
 
 int main() {
-    // Variáveis impostas
+    // Variáveis 
 
     char cidade1[50], cidade2[50];
     unsigned long int populacao1, populacao2;
@@ -19,6 +19,46 @@ int main() {
     float pibc1, pibc2;
     int pontos1, pontos2;
     float super1, super2;
+    
+    // Variável Opção para menus interativos
+    int opcao;
+
+    // Menu inicial do Super Trunfo
+    printf("\n----- Super Trunfo C Edition -----\n");
+    printf("\nMenu Principal: \n");
+    printf("1. Iniciar jogo \n");
+    printf("2. Regras \n");
+    printf("3. Sair \n");
+    scanf("%d", &opcao);
+
+
+    // Código do seletor de opções
+    switch (opcao)
+    {
+    case 1:
+      printf("iniciando...");
+      break;
+    
+    }
+
+    switch (opcao)
+    {
+    case 2:
+      printf("Regras: \n");
+      break;
+  
+    }
+
+    switch (opcao)
+    {
+    case 3:
+      printf("Saindo...");
+      break;
+    
+    default:
+      break;
+    }
+
 
     // Titulo
     printf("\n---- Carta1 ----\n");
@@ -124,10 +164,37 @@ int main() {
     printf("PIB per Capita: %.2f Reais \n", pibc2);
     printf("Super Poder: %.2f \n", super2);
 
+    // Menu de Seleção dos Atributos
+    printf("Escolha o Atributo a ser Comparado");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turisticos\n");
+    printf("5. Densidade populacional\n");
+
+    switch (populacao1)
+    {
+    case 1:
+    if (populacao1 > populacao2){
+    printf("População: Carta 1 Venceu! \n");
+  } else if (populacao2 > populacao1){
+    printf("População Carta 2 Venceu! \n");
+  } else {
+    if(populacao1 == populacao2){
+      printf("População: Empate \n");
+    }
+  }
+       
+      break;
+    
+    default:
+      break;
+    }
+
     // Sistema de Comparação das Cartas
 
     // Titulo
-    printf("\n---- Resultado ----\n");
+    printf("\n---- Resultado Geral ----\n");
 
     // Comparação entre População
   if (populacao1 > populacao2){
@@ -206,6 +273,11 @@ int main() {
     }
   }
 
+
+  return 0;
+
+  
+
     
 
 
@@ -232,5 +304,5 @@ int main() {
 
 
 
-    return 0;
+  
 }
